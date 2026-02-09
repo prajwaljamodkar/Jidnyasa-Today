@@ -1,4 +1,4 @@
-package com.jidnyasa.app.activities;
+package com.example.jidnyasa_today;
 
 import android.content.Intent;
 import android.os.Bundle;

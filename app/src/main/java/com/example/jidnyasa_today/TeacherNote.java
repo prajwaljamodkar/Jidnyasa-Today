@@ -1,4 +1,4 @@
-package com.jidnyasa.app.models;
+package com.example.jidnyasa_today;
 
 /**
  * Model class for teacher notes/feedback

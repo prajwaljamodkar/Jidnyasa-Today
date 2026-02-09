@@ -1,4 +1,4 @@
-package com.jidnyasa.app.activities;
+package com.example.jidnyasa_today;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -12,11 +12,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.jidnyasa_today.MainActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.jidnyasa.app.adapters.ActivityAdapter;
-import com.jidnyasa.app.models.Activity;
-import com.jidnyasa.app.models.Student;
-import com.jidnyasa.app.models.TeacherNote;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,8 +45,8 @@ public class DashboardActivity extends AppCompatActivity {
     
     // Data
     private Student currentStudent;
-    private List<Activity> todaysActivities;
-    
+    private List<ActivityItem> todaysActivities;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -148,17 +146,22 @@ public class DashboardActivity extends AppCompatActivity {
      * Setup activities RecyclerView
      */
     private void setupActivitiesList() {
-        // Demo activities data
         todaysActivities = new ArrayList<>();
-        todaysActivities.add(new Activity("A001", "Art", "Clay Modeling Basics", "Learning to shape clay"));
-        todaysActivities.add(new Activity("A002", "Motor Skills", "Finger Painting Session", "Developing fine motor skills"));
-        
-        // Setup RecyclerView
+
+        todaysActivities.add(
+                new ActivityItem("Art", "Clay Modeling Basics", "#F39C12")
+        );
+
+        todaysActivities.add(
+                new ActivityItem("Motor Skills", "Finger Painting Session", "#27AE60")
+        );
+
         activityAdapter = new ActivityAdapter(this, todaysActivities);
         activitiesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         activitiesRecyclerView.setAdapter(activityAdapter);
     }
-    
+
+
     /**
      * Setup card click listeners
      */

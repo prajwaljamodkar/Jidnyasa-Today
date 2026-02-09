@@ -46,23 +46,24 @@
         android:textStyle="bold" />
 
     <!-- OTP Input -->
+
+    <!-- Verify Button -->
     <EditText
         android:id="@+id/otpInput"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/bg_input_field"
+        android:gravity="center"
         android:hint="Enter 6-digit OTP"
         android:inputType="number"
+        android:letterSpacing="0.3"
         android:maxLength="6"
         android:padding="20dp"
         android:textColor="#2C3E50"
         android:textSize="24sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:letterSpacing="0.3" />
+        android:textStyle="bold" />
 
-    <!-- Verify Button -->
     <Button
         android:id="@+id/verifyButton"
         android:layout_width="match_parent"

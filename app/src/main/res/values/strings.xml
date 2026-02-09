@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Jidnyasa-Today</string>
+    <string name="hello_friend">HELLO FRIEND! 👋</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="jidnyasa">Jidnyasa</string>
+    <string name="subtitle">Let\'s explore the world of curiosity together. Ask your parent to help you log in!</string>
+    <string name="parent_phone_number">PARENT\'S PHONE NUMBER</string>
+    <string name="get_otp">Get OTP 🚀</string>
+    <string name="terms">By continuing, you agree to our Terms of Service</string>
 </resources>

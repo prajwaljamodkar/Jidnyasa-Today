@@ -1,4 +1,4 @@
-package com.jidnyasa.app.models;
+package com.example.jidnyasa_today;
 
 /**
  * Model class to represent a Student

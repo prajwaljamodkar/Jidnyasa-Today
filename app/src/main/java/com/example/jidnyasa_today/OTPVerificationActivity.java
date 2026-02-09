@@ -1,4 +1,4 @@
-package com.jidnyasa.app.activities;
+package com.example.jidnyasa_today;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,8 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.jidnyasa.app.utils.SharedPrefManager;
 
 /**
  * OTPVerificationActivity - Second screen

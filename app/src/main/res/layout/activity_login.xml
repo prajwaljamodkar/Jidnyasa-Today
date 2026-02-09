@@ -110,6 +110,8 @@
                     android:background="#E0E0E0" />
 
                 <!-- Phone Number Input -->
+
+                <!-- Keyboard Icon -->
                 <EditText
                     android:id="@+id/phoneNumberInput"
                     android:layout_width="0dp"
@@ -117,19 +119,18 @@
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:hint="98765 43210"
-                    android:textColorHint="#CCCCCC"
-                    android:textColor="#2C3E50"
-                    android:textSize="18sp"
                     android:inputType="phone"
-                    android:maxLength="10" />
+                    android:maxLength="10"
+                    android:textColor="#2C3E50"
+                    android:textColorHint="#CCCCCC"
+                    android:textSize="18sp" />
 
-                <!-- Keyboard Icon -->
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@drawable/ic_keyboard"
-                    android:tint="#FFD93D"
-                    android:contentDescription="Keyboard" />
+                    android:contentDescription="Keyboard"
+                    app:tint="#FFD93D" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

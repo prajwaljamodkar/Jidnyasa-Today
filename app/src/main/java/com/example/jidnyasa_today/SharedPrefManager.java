@@ -1,4 +1,4 @@
-package com.jidnyasa.app.utils;
+package com.example.jidnyasa_today;
 
 import android.content.Context;
 import android.content.SharedPreferences;
