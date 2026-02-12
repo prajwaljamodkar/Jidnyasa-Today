@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // Optional splash / login logic
-        startActivity(new Intent(this, DashboardActivity.class));
+        startActivity(new Intent(this, LoginActivity.class));
         finish();
     }
 }

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA"
+    android:background="#F6F7F8"
     android:fillViewport="true">
 
     <LinearLayout
@@ -11,193 +11,181 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="24dp"
-        android:gravity="center">
+        android:gravity="center_horizontal">
 
-        <!-- Logo -->
-        <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginTop="60dp"
-            android:src="@drawable/ic_app_logo"
-            android:contentDescription="Jidnyasa Logo" />
+        <!-- App Icon -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            android:backgroundTint="#EAF2FD">
 
-        <!-- Greeting -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="1dp"
+                android:src="@drawable/logo"
+                android:contentDescription="App Logo"
+                android:scaleType="centerInside"
+                app:tint="#4B91E2" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Title -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="HELLO FRIEND! 👋"
-            android:textColor="#7FA8A0"
-            android:textSize="16sp"
-            android:letterSpacing="0.1" />
-
-        <!-- Welcome Title -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Welcome to"
-            android:textColor="#2C3E50"
-            android:textSize="32sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Jidnyasa"
-            android:textColor="#FF6B6B"
-            android:textSize="36sp"
-            android:textStyle="bold" />
+            android:text="Welcome to Jidnyasa"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1F2937" />
 
         <!-- Subtitle -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Let's explore the world of curiosity\ntogether. Ask your parent to help\nyou log in!"
-            android:textColor="#7F8C8D"
+            android:layout_marginTop="8dp"
+            android:text="Learning Through Curiosity"
             android:textSize="14sp"
-            android:gravity="center"
-            android:lineSpacingExtra="4dp" />
+            android:textColor="#6B7280" />
 
-        <!-- Phone Number Label -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:text="PARENT'S PHONE NUMBER"
-            android:textColor="#2C3E50"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:letterSpacing="0.05" />
-
-        <!-- Phone Input Card -->
+        <!-- Login Card -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            app:cardCornerRadius="30dp"
-            app:cardElevation="0dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
             android:backgroundTint="#FFFFFF">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp"
-                android:gravity="center_vertical">
+                android:orientation="vertical"
+                android:padding="24dp">
 
-                <!-- Country Flag -->
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_flag_india"
-                    android:contentDescription="India Flag" />
-
+                <!-- Label -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="+91"
-                    android:textColor="#2C3E50"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:text="MOBILE NUMBER"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#9CA3AF"
+                    android:letterSpacing="0.08" />
 
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginHorizontal="12dp"
-                    android:background="#E0E0E0" />
+                <!-- Input -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="#F1F5F9"
+                    android:paddingHorizontal="16dp"
+                    android:clipToPadding="true">
 
-                <!-- Phone Number Input -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+91"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#6B7280" />
 
-                <!-- Keyboard Icon -->
-                <EditText
-                    android:id="@+id/phoneNumberInput"
-                    android:layout_width="0dp"
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="24dp"
+                        android:layout_marginHorizontal="12dp"
+                        android:background="#CBD5E1" />
+
+                    <EditText
+                        android:id="@+id/phoneNumberInput"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="0000000000"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:background="@android:color/transparent"
+                        android:textSize="16sp"
+                        android:textColor="#1F2937"
+                        android:textColorHint="#9CA3AF" />
+                </LinearLayout>
+
+                <!-- Helper -->
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    android:hint="98765 43210"
-                    android:inputType="phone"
-                    android:maxLength="10"
-                    android:textColor="#2C3E50"
-                    android:textColorHint="#CCCCCC"
-                    android:textSize="18sp" />
+                    android:layout_marginTop="8dp"
+                    android:text="A 6-digit OTP will be sent for verification."
+                    android:textSize="11sp"
+                    android:textColor="#9CA3AF" />
 
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_keyboard"
-                    android:contentDescription="Keyboard"
-                    app:tint="#FFD93D" />
+                <!-- Button -->
+                <Button
+                    android:id="@+id/getOtpButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Send OTP"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#4B91E2" />
+
+                <!-- Staff Login -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Are you a teacher?"
+                        android:textSize="14sp"
+                        android:textColor="#6B7280" />
+
+                    <TextView
+                        android:id="@+id/staffLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Staff Login"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#4B91E2" />
+                </LinearLayout>
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Get OTP Button -->
-        <Button
-            android:id="@+id/getOtpButton"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="24dp"
-            android:text="Get OTP 🚀"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:background="@drawable/bg_rounded_button"
-            android:backgroundTint="#FF6B6B" />
+        <!-- Footer -->
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="By continuing, you agree to follow Jidnyasa's school communication policies and privacy terms. Data charges may apply for SMS."
+            android:textSize="10sp"
+            android:textColor="#9CA3AF" />
 
-        <!-- Terms -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="By continuing, you agree to our Terms of Service"
-            android:textColor="#95A5A6"
-            android:textSize="12sp" />
+            android:layout_marginTop="12dp"
+            android:text="Ver 2.4.0  •  Help Center"
+            android:textSize="10sp"
+            android:textColor="#CBD5E1" />
 
-        <!-- Privacy Badges -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:orientation="horizontal">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="0dp"
-                android:backgroundTint="#E8F5F4">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="12dp"
-                    android:text="✓ PRIVACY-FIRST"
-                    android:textColor="#45B7A8"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="0dp"
-                android:backgroundTint="#E8F5F4">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="12dp"
-                    android:text="☺ CHILD-SAFE"
-                    android:textColor="#45B7A8"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
